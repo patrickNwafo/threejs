@@ -11,7 +11,10 @@ import { fadeAnimation, slideAnimation } from "../config/motion";
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from "../components";
 
 const Custormizer = () => {
-    const snap = useSnapshot(state)
+    const snap = useSnapshot(state);
+
+    // show tab content depending on the activetab
+    const [first, setfirst] = useState("")
     return (
         <AnimatePresence>
             {!snap.intro && (
